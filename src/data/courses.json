@@ -1,0 +1,80 @@
+[
+  {
+    "id": "course-1",
+    "title": "Les Bases du Speedrun : Hollow Knight Any%",
+    "coach": "ShadowRunner",
+    "game": "Hollow Knight",
+    "level": "Débutant",
+    "duration": "2h30",
+    "price": "29€",
+    "rating": 4.9,
+    "students": 142,
+    "thumbnail": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
+    "description": "Apprenez les skips essentiels, la gestion du soul et les patterns des boss majeurs pour réaliser votre premier Sub 1h."
+  },
+  {
+    "id": "course-2",
+    "title": "Maîtriser les Mouvements Avancés dans Celeste",
+    "coach": "CelesteGod",
+    "game": "Celeste",
+    "level": "Avancé",
+    "duration": "3h00",
+    "price": "39€",
+    "rating": 5.0,
+    "students": 98,
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80",
+    "description": "Hyper-dashes, wave-dashes et wall-bounces n'auront plus aucun secret pour vous. Perfectionnez vos trajectoires."
+  },
+  {
+    "id": "course-3",
+    "title": "Elden Ring No Hit : Préparation et Stratégies",
+    "coach": "EldenMaster",
+    "game": "Elden Ring",
+    "level": "Expert",
+    "duration": "4h15",
+    "price": "49€",
+    "rating": 4.8,
+    "students": 210,
+    "thumbnail": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80",
+    "description": "Analyse pas à pas des hitboxes, esquives parfaites et routing optimal pour réussir votre défi No Hit."
+  },
+  {
+    "id": "course-4",
+    "title": "Super Mario 64 : Le Guide 70 Stars",
+    "coach": "PixelNinja",
+    "game": "Super Mario 64",
+    "level": "Débutant",
+    "duration": "2h00",
+    "price": "25€",
+    "rating": 4.7,
+    "students": 85,
+    "thumbnail": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+    "description": "Découvrez les routes classiques et les contrôles caméra indispensables pour débuter sur N64."
+  },
+  {
+    "id": "course-5",
+    "title": "Optimization & Glitches dans Zelda OoT",
+    "coach": "SpeedyGonzales",
+    "game": "Zelda: Ocarina of Time",
+    "level": "Avancé",
+    "duration": "3h30",
+    "price": "35€",
+    "rating": 4.9,
+    "students": 130,
+    "thumbnail": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80",
+    "description": "Wrong warp, SRM et manipulation de mémoire expliqués simplement avec exercices pratiques."
+  },
+  {
+    "id": "course-6",
+    "title": "Metroid Dread : Sequence Breaks & Boss Melt",
+    "coach": "RetroQueen",
+    "game": "Metroid Dread",
+    "level": "Avancé",
+    "duration": "2h45",
+    "price": "32€",
+    "rating": 4.8,
+    "students": 76,
+    "thumbnail": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80",
+    "description": "Obtenez le rayon de charge précoce et battez les E.M.M.I en un temps record."
+  }
+]
