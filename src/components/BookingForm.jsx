@@ -100,6 +100,7 @@ export default function BookingForm({ onBack }) {
           </button>
         </form>
       )}
+      
     </section>
   );
 }
