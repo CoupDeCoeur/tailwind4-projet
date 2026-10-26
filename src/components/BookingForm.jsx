@@ -4,18 +4,31 @@ export default function BookingForm({ onBack }) {
   const [email, setEmail] = useState('');
   const [course, setCourse] = useState('Les Bases du Speedrun : Hollow Knight Any%');
   const [date, setDate] = useState('');
-  const [error, setError] = useState('');
+  
+  // États pour suivre si le formulaire a été soumis au moins une fois
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitted(true);
+
+    // Vérification de la validité de chaque champ obligatoire
     if (!email.trim() || !date) {
-      setError('Tous les champs sont requis');
-      return;
+      return; // Stoppe l'envoi si un champ est vide
     }
-    setError('');
+
     setSuccess(true);
   };
+
+  // Classes conditionnelles pour l'affichage en rouge si vide après soumission
+  const getEmailErrorClass = isSubmitted && !email.trim() 
+    ? "border-red-500 focus:ring-red-500" 
+    : "border-gray-700 focus:ring-primary";
+
+  const getDateErrorClass = isSubmitted && !date 
+    ? "border-red-500 focus:ring-red-500" 
+    : "border-gray-700 focus:ring-primary";
 
   return (
     <section className="p-6 max-w-xl mx-auto min-h-screen bg-bg-main text-text-main">
@@ -39,17 +52,17 @@ export default function BookingForm({ onBack }) {
             Un e-mail de confirmation t'a été envoyé à <span className="text-text-main font-semibold">{email}</span>.
           </p>
           <button
-            onClick={() => { setSuccess(false); setEmail(''); setDate(''); }}
+            onClick={() => { setSuccess(false); setEmail(''); setDate(''); setIsSubmitted(false); }}
             className="min-h-[44px] px-6 py-2 bg-primary text-white rounded-lg font-semibold cursor-pointer"
           >
             Nouvelle réservation
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="bg-bg-card p-6 rounded-xl border border-gray-800 flex flex-col gap-4">
+        <form onSubmit={handleSubmit} className="bg-bg-card p-6 rounded-xl border border-gray-800 flex flex-col gap-4" noValidate>
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-1 text-text-muted">
-              Adresse e-mail
+              Adresse e-mail <span className="text-red-500">*</span>
             </label>
             <input
               type="email"
@@ -57,8 +70,11 @@ export default function BookingForm({ onBack }) {
               placeholder="exemple@mail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full min-h-[44px] px-4 py-2 bg-bg-main border border-gray-700 rounded-lg text-text-main focus:outline-none focus:ring-2 focus:ring-primary"
+              className={`w-full min-h-[44px] px-4 py-2 bg-bg-main border rounded-lg text-text-main focus:outline-none focus:ring-2 ${getEmailErrorClass}`}
             />
+            {isSubmitted && !email.trim() && (
+              <span className="text-xs text-red-500 mt-1 block">L'adresse e-mail est obligatoire.</span>
+            )}
           </div>
 
           <div>
@@ -77,20 +93,21 @@ export default function BookingForm({ onBack }) {
             </select>
           </div>
 
-          <div>
+<div>
             <label htmlFor="date" className="block text-sm font-medium mb-1 text-text-muted">
-              Date souhaitée
+              Date souhaitée <span className="text-red-500">*</span>
             </label>
             <input
               type="date"
               id="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full min-h-[44px] px-4 py-2 bg-bg-main border border-gray-700 rounded-lg text-text-main focus:outline-none focus:ring-2 focus:ring-primary"
+              className={`w-full min-h-[44px] px-4 py-2 bg-bg-main border rounded-lg text-text-main focus:outline-none focus:ring-2 ${getDateErrorClass}`}
             />
+            {isSubmitted && !date && (
+              <span className="text-xs text-red-500 mt-1 block">Veuillez sélectionner une date.</span>
+            )}
           </div>
-
-          {error && <span className="text-xs text-red-500 mt-1 block">{error}</span>}
 
           <button
             type="submit"
@@ -100,7 +117,6 @@ export default function BookingForm({ onBack }) {
           </button>
         </form>
       )}
-      
     </section>
   );
 }
