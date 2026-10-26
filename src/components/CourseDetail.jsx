@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './CourseBadge.module.scss';
+import CoachModal from './CoachModal';
 
 export default function CourseDetail({ course, onBack, onBook }) {
+  const [showCoachModal, setShowCoachModal] = useState(false);
+
   if (!course) return null;
 
   return (
@@ -37,11 +40,22 @@ export default function CourseDetail({ course, onBack, onBook }) {
             {course.description}
           </p>
 
-          <div className="flex flex-wrap gap-6 text-sm text-text-muted border-t border-b border-gray-800 py-4 mb-6">
-            <p>Jeu : <span className="text-text-main font-semibold">{course.game}</span></p>
-            <p>Coach : <span className="text-accent font-semibold">{course.coach}</span></p>
-            <p>Durée : <span className="text-text-main font-semibold">{course.duration}</span></p>
-            <p>Note : <span className="text-text-main font-semibold">⭐ {course.rating} / 5</span></p>
+          <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-text-muted border-t border-b border-gray-800 py-4 mb-6">
+            <div className="flex flex-wrap gap-6 items-center">
+              <p>Jeu : <span className="text-text-main font-semibold">{course.game}</span></p>
+              <div className="flex items-center gap-2">
+                <span>Coach : <strong className="text-accent">{course.coach}</strong></span>
+                {/* Bouton Voir le Profil */}
+                <button
+                  onClick={() => setShowCoachModal(true)}
+                  className="min-h-[44px] px-3 py-1 text-xs bg-bg-main hover:bg-bg-card-hover border border-accent/40 text-accent rounded-lg transition cursor-pointer flex items-center gap-1 font-semibold"
+                >
+                  👤 Voir le profil
+                </button>
+              </div>
+              <p>Durée : <span className="text-text-main font-semibold">{course.duration}</span></p>
+              <p>Note : <span className="text-text-main font-semibold">⭐ {course.rating} / 5</span></p>
+            </div>
           </div>
 
           <button 
@@ -52,6 +66,14 @@ export default function CourseDetail({ course, onBack, onBook }) {
           </button>
         </div>
       </div>
+
+      {/* Affichage conditionnel de la modale coach */}
+      {showCoachModal && (
+        <CoachModal
+          coachName={course.coach}
+          onClose={() => setShowCoachModal(false)}
+        />
+      )}
     </section>
   );
 }

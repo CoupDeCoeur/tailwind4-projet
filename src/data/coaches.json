@@ -1,0 +1,56 @@
+{
+  "ShadowRunner": {
+    "name": "ShadowRunner",
+    "realName": "Alexandre Dupont",
+    "avatar": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=400&q=80",
+    "bio": "Spécialiste du speedrun Metroidvania et platformers exigeants. Plus de 5 ans d'expérience dans le coaching e-sport.",
+    "achievements": ["Top 3 World Hollow Knight Any%", "Vainqueur SGDQ 2023", "1500+ heures de coaching"],
+    "specialties": ["Hollow Knight", "Ori", "Blasphemous"],
+    "rating": 4.9
+  },
+  "CelesteGod": {
+    "name": "CelesteGod",
+    "realName": "Sophie Martin",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    "bio": "Runner professionnelle et créatrice de contenu dédiée à la précision des mouvements sur Celeste et platformers 2D.",
+    "achievements": ["WR Celeste Farewell No-Dash", "Coach Certifiée GameAcademy", "Streamer Partner"],
+    "specialties": ["Celeste", "Super Meat Boy", "Katana Zero"],
+    "rating": 5.0
+  },
+  "EldenMaster": {
+    "name": "EldenMaster",
+    "realName": "Lucas Bernard",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    "bio": "Expert ès Soulslike et défis No Hit. Analyste minutieux des hitboxes et des comportements de boss.",
+    "achievements": ["Elden Ring All Bosses No Hit", "Dark Souls 3 SL1 Bare Fists", "Analyste e-sport"],
+    "specialties": ["Elden Ring", "Dark Souls III", "Sekiro"],
+    "rating": 4.8
+  },
+  "PixelNinja": {
+    "name": "PixelNinja",
+    "realName": "Thomas Leroy",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+    "bio": "Passionné de retrogaming et pionnier des catégories SM64 en France.",
+    "achievements": ["Top 10 Europe SM64 120 Stars", "Organisateur de Marathon Speedrun"],
+    "specialties": ["Super Mario 64", "Banjo-Kazooie", "Donkey Kong 64"],
+    "rating": 4.7
+  },
+  "SpeedyGonzales": {
+    "name": "SpeedyGonzales",
+    "realName": "Julien Moreau",
+    "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=400&q=80",
+    "bio": "Spécialiste de la manipulation de mémoire et des glitches sur les Zelda rétro et modernes.",
+    "achievements": ["Zelda OoT Any% Sub-20min", "Décodeur de Glitches"],
+    "specialties": ["Zelda OoT", "Zelda Majora's Mask", "Zelda BotW"],
+    "rating": 4.9
+  },
+  "RetroQueen": {
+    "name": "RetroQueen",
+    "realName": "Camille Roux",
+    "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "bio": "Experte des franchissements de séquence (sequence breaks) et des optimisations de boss sur la franchise Metroid.",
+    "achievements": ["Metroid Dread 100% Sub 2h", "Championne de Tournoi Speedrun"],
+    "specialties": ["Metroid Dread", "Super Metroid", "Metroid Prime"],
+    "rating": 4.8
+  }
+}
